@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Attendance</string>
-    <string name="banner_ad_unit_id">ca-app-pub-1646276810461481/1512657912</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-1646276810461481/7425429760</string>-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="teacher_login">Teacher Login</string>
+    <string name="school">School</string>
+    <string name="college">College</string>
+    <string name="category">Category</string>
 </resources>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.android.attendance" >
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    package="com.android.attendance">
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/attendance"
@@ -12,23 +14,31 @@
         android:roundIcon="@drawable/attendance"
         android:supportsRtl="true"
         android:theme="@style/Theme.Attendance"
-        tools:ignore="AllowBackup" >
+        tools:ignore="AllowBackup">
         <activity
-            android:name=".Activities.HomeScreen"
-            android:hardwareAccelerated="true"
+            android:name=".Activities.Login"
+            android:label="Login"
             android:exported="false" />
         <activity
+            android:name=".Activities.category"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HomeScreen"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
             android:name=".Activities.Splash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1646276810461481~6246109840"/>
+            android:value="ca-app-pub-1646276810461481~6246109840" />
     </application>
 
 </manifest>

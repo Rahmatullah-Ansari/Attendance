@@ -27,24 +27,9 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivityHomeScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        List<String> testDeviceIds = Arrays.asList("F73AA043D55691CAD3BB9674C77F3D48");
-        RequestConfiguration configuration =
-                new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
-        MobileAds.setRequestConfiguration(configuration);
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
-            }
-        });
+        MobileAds.initialize(this, initializationStatus -> {});
         mAdView = binding.adView;
         adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
-
-    @Override
-    public void onBackPressed() {
-        for(int i=0;i<=250;i++) {
-            mAdView.loadAd(adRequest);
-        }
-    }
-
 }

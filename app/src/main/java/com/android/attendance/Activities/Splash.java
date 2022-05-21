@@ -22,7 +22,7 @@ public static final int TIMER=5000;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(Splash.this,HomeScreen.class));
+            startActivity(new Intent(Splash.this,Login.class));
             finish();
         }, TIMER);
     }
